@@ -1,0 +1,20 @@
+这是在GitHub上写的第一段代码。
+LeetCode_practise1_twoSum
+思路1：暴力法
+遍历每个元素，查找是否存在匹配结果
+
+class Solution
+{
+public int[] twoSum(int[] nums, int target)
+{
+for(int i = 0; i<nums.length; i++)
+{
+for(int j = i+1; j<nums.length; j++)
+{
+if(nums[i]+nums[j] == target)
+{return new int[] {i,j};}
+}
+}
+throw new IllegalArgumentException("No two sum solution");//错误处理要有
+}
+}
